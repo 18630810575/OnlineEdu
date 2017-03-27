@@ -10,4 +10,7 @@
 
 @interface BaseViewController : UIViewController
 
+- (instancetype)initWithTitle:(NSString *)title;
+
+
 @end
