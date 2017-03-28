@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DBE81DB1E8A552800BF3870 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBE81DA1E8A552800BF3870 /* PersonalViewController.m */; };
 		7DE7008C1E89082E004532E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7008B1E89082E004532E5 /* main.m */; };
 		7DE7008F1E89082E004532E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7008E1E89082E004532E5 /* AppDelegate.m */; };
 		7DE700971E89082E004532E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE700961E89082E004532E5 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlineEdu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E375D4ADC5FCBA5EDE5BB65 /* Pods-OnlineEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu.debug.xcconfig"; sourceTree = "<group>"; };
+		7DBE81D91E8A552800BF3870 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		7DBE81DA1E8A552800BF3870 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		7DE700871E89082E004532E5 /* OnlineEdu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineEdu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE7008B1E89082E004532E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DE7008D1E89082E004532E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +102,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7DBE81D51E8A53F000BF3870 /* SelfCenter */ = {
+			isa = PBXGroup;
+			children = (
+				7DBE81D81E8A541B00BF3870 /* Model */,
+				7DBE81D71E8A541500BF3870 /* View */,
+				7DBE81D61E8A540F00BF3870 /* Controller */,
+			);
+			name = SelfCenter;
+			sourceTree = "<group>";
+		};
+		7DBE81D61E8A540F00BF3870 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DBE81D91E8A552800BF3870 /* PersonalViewController.h */,
+				7DBE81DA1E8A552800BF3870 /* PersonalViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7DBE81D71E8A541500BF3870 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7DBE81D81E8A541B00BF3870 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7DE7007E1E89082E004532E5 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +162,7 @@
 			children = (
 				7DE700C81E8911CA004532E5 /* Base */,
 				7DE700C01E8908BD004532E5 /* Main */,
+				7DBE81D51E8A53F000BF3870 /* SelfCenter */,
 				7DE700BF1E8908B0004532E5 /* WebAgent */,
 				7DE700BE1E8908A8004532E5 /* ThirdTools */,
 				7DE700BD1E89089A004532E5 /* Other */,
@@ -429,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DE700CE1E896904004532E5 /* APIClient.m in Sources */,
+				7DBE81DB1E8A552800BF3870 /* PersonalViewController.m in Sources */,
 				7DE7008F1E89082E004532E5 /* AppDelegate.m in Sources */,
 				7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */,
 				7DE700C71E8909B2004532E5 /* MainViewController.m in Sources */,

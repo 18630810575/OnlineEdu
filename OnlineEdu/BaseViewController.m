@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         self.title = title;
-        self.view.backgroundColor = UIColorFromRGB(0x515151);
+        self.view.backgroundColor = UIColorFromRGB(0xF4F5F7);
     }
     return self;
 }
