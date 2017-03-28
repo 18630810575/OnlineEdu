@@ -15,6 +15,9 @@
 		7DE700B01E89082E004532E5 /* OnlineEduUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700AF1E89082E004532E5 /* OnlineEduUITests.m */; };
 		7DE700C71E8909B2004532E5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700C61E8909B2004532E5 /* MainViewController.m */; };
 		7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700CA1E8911DB004532E5 /* BaseViewController.m */; };
+		7DE700CE1E896904004532E5 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700CD1E896904004532E5 /* APIClient.m */; };
+		7DE700D11E896945004532E5 /* WebAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700D01E896945004532E5 /* WebAgent.m */; };
+		EAAA2AEE245CEA0A0FED647B /* libPods-OnlineEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlineEdu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E375D4ADC5FCBA5EDE5BB65 /* Pods-OnlineEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		7DE700871E89082E004532E5 /* OnlineEdu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineEdu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE7008B1E89082E004532E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DE7008D1E89082E004532E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +57,12 @@
 		7DE700C61E8909B2004532E5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7DE700C91E8911DB004532E5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		7DE700CA1E8911DB004532E5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		7DE700CC1E896904004532E5 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		7DE700CD1E896904004532E5 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		7DE700CF1E896945004532E5 /* WebAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAgent.h; sourceTree = "<group>"; };
+		7DE700D01E896945004532E5 /* WebAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAgent.m; sourceTree = "<group>"; };
+		7DE700D21E896B6B004532E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAAA2AEE245CEA0A0FED647B /* libPods-OnlineEdu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F8ACBB83C99C4131E6FE497 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DE7007E1E89082E004532E5 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +106,8 @@
 				7DE700A31E89082E004532E5 /* OnlineEduTests */,
 				7DE700AE1E89082E004532E5 /* OnlineEduUITests */,
 				7DE700881E89082E004532E5 /* Products */,
+				93B226099A2DA776B999F36E /* Pods */,
+				6F8ACBB83C99C4131E6FE497 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +168,7 @@
 				7DE700961E89082E004532E5 /* Assets.xcassets */,
 				7DE700981E89082E004532E5 /* LaunchScreen.storyboard */,
 				7DE7009B1E89082E004532E5 /* Info.plist */,
+				7DE700D21E896B6B004532E5 /* PrefixHeader.pch */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -160,6 +183,10 @@
 		7DE700BF1E8908B0004532E5 /* WebAgent */ = {
 			isa = PBXGroup;
 			children = (
+				7DE700CC1E896904004532E5 /* APIClient.h */,
+				7DE700CD1E896904004532E5 /* APIClient.m */,
+				7DE700CF1E896945004532E5 /* WebAgent.h */,
+				7DE700D01E896945004532E5 /* WebAgent.m */,
 			);
 			name = WebAgent;
 			sourceTree = "<group>";
@@ -206,6 +233,15 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		93B226099A2DA776B999F36E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E375D4ADC5FCBA5EDE5BB65 /* Pods-OnlineEdu.debug.xcconfig */,
+				C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DE700B41E89082E004532E5 /* Build configuration list for PBXNativeTarget "OnlineEdu" */;
 			buildPhases = (
+				08CCECCB10DB8D03E557A983 /* [CP] Check Pods Manifest.lock */,
 				7DE700831E89082E004532E5 /* Sources */,
 				7DE700841E89082E004532E5 /* Frameworks */,
 				7DE700851E89082E004532E5 /* Resources */,
+				7AD570E53F6F1DE0AD90634D /* [CP] Embed Pods Frameworks */,
+				DBB0B458CCE482E5AB38EA9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,7 +312,7 @@
 				TargetAttributes = {
 					7DE700861E89082E004532E5 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 2SPA2FSXHP;
+						DevelopmentTeam = 87GQR54YY2;
 						ProvisioningStyle = Automatic;
 					};
 					7DE7009F1E89082E004532E5 = {
@@ -336,14 +375,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08CCECCB10DB8D03E557A983 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7AD570E53F6F1DE0AD90634D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBB0B458CCE482E5AB38EA9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7DE700831E89082E004532E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE700CE1E896904004532E5 /* APIClient.m in Sources */,
 				7DE7008F1E89082E004532E5 /* AppDelegate.m in Sources */,
 				7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */,
 				7DE700C71E8909B2004532E5 /* MainViewController.m in Sources */,
+				7DE700D11E896945004532E5 /* WebAgent.m in Sources */,
 				7DE7008C1E89082E004532E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,24 +570,28 @@
 		};
 		7DE700B51E89082E004532E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E375D4ADC5FCBA5EDE5BB65 /* Pods-OnlineEdu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2SPA2FSXHP;
+				DEVELOPMENT_TEAM = 87GQR54YY2;
+				GCC_PREFIX_HEADER = OnlineEdu/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineEdu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SR.OnlineEdu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SR.OnlineEdu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		7DE700B61E89082E004532E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2SPA2FSXHP;
+				DEVELOPMENT_TEAM = 87GQR54YY2;
+				GCC_PREFIX_HEADER = OnlineEdu/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineEdu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SR.OnlineEdu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SR.OnlineEdu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -572,6 +665,7 @@
 				7DE700B61E89082E004532E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DE700B71E89082E004532E5 /* Build configuration list for PBXNativeTarget "OnlineEduTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +674,7 @@
 				7DE700B91E89082E004532E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DE700BA1E89082E004532E5 /* Build configuration list for PBXNativeTarget "OnlineEduUITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +683,7 @@
 				7DE700BC1E89082E004532E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
