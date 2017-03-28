@@ -26,9 +26,9 @@
         NSData *data = [[NSData alloc]initWithData:responseObject];
         NSDictionary *dict= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
-        NSLog(@"0000");
+        NSLog(@"%@", dict[@"message"]);
     } failure:^(NSError *error) {
-        NSLog(@"1111");
+        NSLog(@"fail");
     }];
 }
 
