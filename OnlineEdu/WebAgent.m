@@ -16,7 +16,7 @@
                failure:(void (^)(NSError *error))failure{
 
     NSDictionary *dict = @{@"param":param};
-    [[APIClient sharedClient] POST:@"controllerName/functionName/" parameters:dict progress:^(NSProgress * _Nonnull uploadProgress) {
+    [[APIClient sharedClient] POST:@"user/getInfoDemo/" parameters:dict progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
