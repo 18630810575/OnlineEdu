@@ -18,6 +18,11 @@
 		7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700CA1E8911DB004532E5 /* BaseViewController.m */; };
 		7DE700CE1E896904004532E5 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700CD1E896904004532E5 /* APIClient.m */; };
 		7DE700D11E896945004532E5 /* WebAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE700D01E896945004532E5 /* WebAgent.m */; };
+		81093AAE1E8B3D9100C9F94E /* CourseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AA91E8B3D9100C9F94E /* CourseNavigationController.m */; };
+		81093AB01E8B3D9100C9F94E /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AAC1E8B3D9100C9F94E /* CourseViewController.m */; };
+		81093AB81E8B3DB100C9F94E /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AB31E8B3DB100C9F94E /* HomeNavigationController.m */; };
+		81093ABA1E8B3DB100C9F94E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AB61E8B3DB100C9F94E /* HomeViewController.m */; };
+		81093ABE1E8B402600C9F94E /* PersonalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */; };
 		EAAA2AEE245CEA0A0FED647B /* libPods-OnlineEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -65,6 +70,16 @@
 		7DE700CF1E896945004532E5 /* WebAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAgent.h; sourceTree = "<group>"; };
 		7DE700D01E896945004532E5 /* WebAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAgent.m; sourceTree = "<group>"; };
 		7DE700D21E896B6B004532E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		81093AA81E8B3D9100C9F94E /* CourseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseNavigationController.h; sourceTree = "<group>"; };
+		81093AA91E8B3D9100C9F94E /* CourseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseNavigationController.m; sourceTree = "<group>"; };
+		81093AAB1E8B3D9100C9F94E /* CourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewController.h; sourceTree = "<group>"; };
+		81093AAC1E8B3D9100C9F94E /* CourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewController.m; sourceTree = "<group>"; };
+		81093AB21E8B3DB100C9F94E /* HomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
+		81093AB31E8B3DB100C9F94E /* HomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
+		81093AB51E8B3DB100C9F94E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		81093AB61E8B3DB100C9F94E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		81093ABC1E8B402600C9F94E /* PersonalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalNavigationController.h; sourceTree = "<group>"; };
+		81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalNavigationController.m; sourceTree = "<group>"; };
 		C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +130,8 @@
 		7DBE81D61E8A540F00BF3870 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				81093ABC1E8B402600C9F94E /* PersonalNavigationController.h */,
+				81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */,
 				7DBE81D91E8A552800BF3870 /* PersonalViewController.h */,
 				7DBE81DA1E8A552800BF3870 /* PersonalViewController.m */,
 			);
@@ -160,6 +177,8 @@
 		7DE700891E89082E004532E5 /* OnlineEdu */ = {
 			isa = PBXGroup;
 			children = (
+				81093A9A1E8B3D2E00C9F94E /* Course */,
+				81093A961E8B3C1D00C9F94E /* Home */,
 				7DE700C81E8911CA004532E5 /* Base */,
 				7DE700C01E8908BD004532E5 /* Main */,
 				7DBE81D51E8A53F000BF3870 /* SelfCenter */,
@@ -268,6 +287,76 @@
 				7DE700CA1E8911DB004532E5 /* BaseViewController.m */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		81093A961E8B3C1D00C9F94E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				81093A971E8B3C2D00C9F94E /* Model */,
+				81093A981E8B3C3900C9F94E /* View */,
+				81093A991E8B3C5300C9F94E /* Controller */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		81093A971E8B3C2D00C9F94E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		81093A981E8B3C3900C9F94E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		81093A991E8B3C5300C9F94E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81093AB21E8B3DB100C9F94E /* HomeNavigationController.h */,
+				81093AB31E8B3DB100C9F94E /* HomeNavigationController.m */,
+				81093AB51E8B3DB100C9F94E /* HomeViewController.h */,
+				81093AB61E8B3DB100C9F94E /* HomeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		81093A9A1E8B3D2E00C9F94E /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				81093A9D1E8B3D4B00C9F94E /* Model */,
+				81093A9C1E8B3D4500C9F94E /* View */,
+				81093A9B1E8B3D3E00C9F94E /* Controller */,
+			);
+			name = Course;
+			sourceTree = "<group>";
+		};
+		81093A9B1E8B3D3E00C9F94E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81093AA81E8B3D9100C9F94E /* CourseNavigationController.h */,
+				81093AA91E8B3D9100C9F94E /* CourseNavigationController.m */,
+				81093AAB1E8B3D9100C9F94E /* CourseViewController.h */,
+				81093AAC1E8B3D9100C9F94E /* CourseViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		81093A9C1E8B3D4500C9F94E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		81093A9D1E8B3D4B00C9F94E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		93B226099A2DA776B999F36E /* Pods */ = {
@@ -468,8 +557,13 @@
 				7DE700CE1E896904004532E5 /* APIClient.m in Sources */,
 				7DBE81DB1E8A552800BF3870 /* PersonalViewController.m in Sources */,
 				7DE7008F1E89082E004532E5 /* AppDelegate.m in Sources */,
+				81093AB01E8B3D9100C9F94E /* CourseViewController.m in Sources */,
 				7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */,
+				81093AAE1E8B3D9100C9F94E /* CourseNavigationController.m in Sources */,
+				81093ABA1E8B3DB100C9F94E /* HomeViewController.m in Sources */,
+				81093AB81E8B3DB100C9F94E /* HomeNavigationController.m in Sources */,
 				7DE700C71E8909B2004532E5 /* MainViewController.m in Sources */,
+				81093ABE1E8B402600C9F94E /* PersonalNavigationController.m in Sources */,
 				7DE700D11E896945004532E5 /* WebAgent.m in Sources */,
 				7DE7008C1E89082E004532E5 /* main.m in Sources */,
 			);
