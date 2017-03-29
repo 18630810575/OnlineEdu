@@ -12,5 +12,5 @@
 
 - (instancetype)initWithTitle:(NSString *)title;
 -(void)setNavTitleWith:(NSString*)title;
--(void)setRightBarBtnWith:(UIImage*)image action:(id)action;
+-(void)setBarBtnWithImage:(UIImage*)image SEL:(SEL)action;
 @end

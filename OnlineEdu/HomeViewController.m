@@ -16,8 +16,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setBarBtn];
     [self setNavTitleWith:@"主页"];
+    [self setBarBtnWithImage:[UIImage imageNamed:@"search"] SEL:@selector(search)];
 
 }
 
@@ -25,13 +25,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
--(void)setBarBtn{
-    UIBarButtonItem* rightBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search)];
-    rightBar.tintColor = RGB(166, 166, 166);
-    self.navigationItem.rightBarButtonItem = rightBar;
-}
-
 -(void)search{
     NSLog(@"搜索");
 }

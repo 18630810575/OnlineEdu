@@ -31,10 +31,14 @@
     [titleLabel setTextAlignment:NSTextAlignmentCenter];
     self.navigationItem.titleView = titleLabel;
 }
--(void)setRightBarBtnWith:(UIImage*)image action:(id)action{
-    UIBarButtonItem* rightBar = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(action)];
-    rightBar.tintColor = RGB(166, 166, 166);
-    self.navigationItem.rightBarButtonItem = rightBar;
+-(void)setBarBtnWithImage:(UIImage*)image SEL:(SEL)action{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 18, 18);
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    [button addTarget:self action:action
+     forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = rightBarBtn;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

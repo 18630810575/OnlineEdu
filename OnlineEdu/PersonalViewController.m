@@ -19,22 +19,10 @@
     
     [super viewDidLoad];
     [self setNavTitleWith:@"我的"];
-    [self setBarBtn];
+    [self setBarBtnWithImage:[UIImage imageNamed:@"setting"] SEL:@selector(personalSet)];
     
 }
 
--(void)setBarBtn{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 20, 20);
-    
-    [button setBackgroundImage:[UIImage imageNamed:@"setting"] forState:UIControlStateNormal];
-//    button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(personalSet)
-     forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
-    self.navigationItem.rightBarButtonItem = rightBarBtn;
-}
 -(void)viewWillAppear:(BOOL)animated{
     
 }
