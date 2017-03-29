@@ -23,6 +23,7 @@
 		81093AB81E8B3DB100C9F94E /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AB31E8B3DB100C9F94E /* HomeNavigationController.m */; };
 		81093ABA1E8B3DB100C9F94E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AB61E8B3DB100C9F94E /* HomeViewController.m */; };
 		81093ABE1E8B402600C9F94E /* PersonalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */; };
+		81093AC11E8B570400C9F94E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AC01E8B570400C9F94E /* BaseNavigationController.m */; };
 		EAAA2AEE245CEA0A0FED647B /* libPods-OnlineEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		81093AB61E8B3DB100C9F94E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		81093ABC1E8B402600C9F94E /* PersonalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalNavigationController.h; sourceTree = "<group>"; };
 		81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalNavigationController.m; sourceTree = "<group>"; };
+		81093ABF1E8B570400C9F94E /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		81093AC01E8B570400C9F94E /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +288,8 @@
 			children = (
 				7DE700C91E8911DB004532E5 /* BaseViewController.h */,
 				7DE700CA1E8911DB004532E5 /* BaseViewController.m */,
+				81093ABF1E8B570400C9F94E /* BaseNavigationController.h */,
+				81093AC01E8B570400C9F94E /* BaseNavigationController.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				81093AB01E8B3D9100C9F94E /* CourseViewController.m in Sources */,
 				7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */,
 				81093AAE1E8B3D9100C9F94E /* CourseNavigationController.m in Sources */,
+				81093AC11E8B570400C9F94E /* BaseNavigationController.m in Sources */,
 				81093ABA1E8B3DB100C9F94E /* HomeViewController.m in Sources */,
 				81093AB81E8B3DB100C9F94E /* HomeNavigationController.m in Sources */,
 				7DE700C71E8909B2004532E5 /* MainViewController.m in Sources */,

@@ -18,14 +18,31 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self setNavTitleWith:@"我的"];
+    
+//    [self setRightBarBtnWith:[UIImage imageNamed:@"g_seach.png"] action:@"personalSet"];
+    [self setBarBtn];
     
 }
 
-
+-(void)setBarBtn{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 40, 40);
+    [button setBackgroundImage:[UIImage imageNamed:@"g_seach"]
+                      forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor redColor];  
+    [button addTarget:self action:@selector(personalSet)
+     forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = rightBarBtn;
+}
 -(void)viewWillAppear:(BOOL)animated{
 
 }
-
+-(void)personalSet{
+    NSLog(@"设置");
+}
 #pragma mark -----onclick-----
 
 

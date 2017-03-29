@@ -1,5 +1,5 @@
 //
-//  PersonalNavigationController.h
+//  BaseNavigationController.h
 //  OnlineEdu
 //
 //  Created by 高德昊 on 2017/3/29.
@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PersonalNavigationController : BaseNavigationController
-
+@interface BaseNavigationController : UINavigationController
 @end

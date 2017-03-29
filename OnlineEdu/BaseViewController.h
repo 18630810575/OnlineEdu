@@ -11,6 +11,6 @@
 @interface BaseViewController : UIViewController
 
 - (instancetype)initWithTitle:(NSString *)title;
-
-
+-(void)setNavTitleWith:(NSString*)title;
+-(void)setRightBarBtnWith:(UIImage*)image action:(id)action;
 @end
