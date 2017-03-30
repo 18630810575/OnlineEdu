@@ -3,4 +3,7 @@ platform :ios, '8.0'
 
 target 'OnlineEdu' do
   pod 'AFNetworking', '~> 3.0'
+  pod 'SDWebImage', '~> 3.7.2'
+  pod 'MBProgressHUD', '~> 0.9.1'
+  pod 'MJRefresh'
 end

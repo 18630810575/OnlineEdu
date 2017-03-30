@@ -26,11 +26,14 @@
 -(void)viewWillAppear:(BOOL)animated{
     
 }
--(void)personalSet{
-    NSLog(@"设置");
-}
-#pragma mark -----onclick-----
+#pragma mark -----others-----
 
+#pragma mark -----onclick-----
+-(void)personalSet{
+    
+    NSLog(@"设置");
+    
+}
 
 
 #pragma mark -----getters-----
