@@ -19,9 +19,13 @@
 //屏幕尺寸
 #define UIScreenWidth [UIScreen mainScreen].bounds.size.width
 #define UIScreenHeight [UIScreen mainScreen].bounds.size.height
+//设计图尺寸
+#define UIPlanWidth 1242.00
+#define UIPlanScale UIScreenWidth/1242.00
 //接口地址
 #define API_HOST @"http://127.0.0.1/oephp/index.php/Home/"
-
+//轮播图比例
+#define RingImage 409.00/1072
 
 
 
