@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7702781E8BB2DA009FA92D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7702771E8BB2DA009FA92D /* SettingViewController.m */; };
 		7DBE81DB1E8A552800BF3870 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBE81DA1E8A552800BF3870 /* PersonalViewController.m */; };
 		7DE7008C1E89082E004532E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7008B1E89082E004532E5 /* main.m */; };
 		7DE7008F1E89082E004532E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7008E1E89082E004532E5 /* AppDelegate.m */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlineEdu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E375D4ADC5FCBA5EDE5BB65 /* Pods-OnlineEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu.debug.xcconfig"; sourceTree = "<group>"; };
+		7D7702761E8BB2DA009FA92D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		7D7702771E8BB2DA009FA92D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		7DBE81D91E8A552800BF3870 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
 		7DBE81DA1E8A552800BF3870 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		7DE700871E89082E004532E5 /* OnlineEdu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineEdu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +140,8 @@
 				81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */,
 				7DBE81D91E8A552800BF3870 /* PersonalViewController.h */,
 				7DBE81DA1E8A552800BF3870 /* PersonalViewController.m */,
+				7D7702761E8BB2DA009FA92D /* SettingViewController.h */,
+				7D7702771E8BB2DA009FA92D /* SettingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -443,7 +448,7 @@
 				TargetAttributes = {
 					7DE700861E89082E004532E5 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 87GQR54YY2;
+						DevelopmentTeam = 2SPA2FSXHP;
 						ProvisioningStyle = Automatic;
 					};
 					7DE7009F1E89082E004532E5 = {
@@ -562,6 +567,7 @@
 				7DE700CE1E896904004532E5 /* APIClient.m in Sources */,
 				7DBE81DB1E8A552800BF3870 /* PersonalViewController.m in Sources */,
 				7DE7008F1E89082E004532E5 /* AppDelegate.m in Sources */,
+				7D7702781E8BB2DA009FA92D /* SettingViewController.m in Sources */,
 				81093AB01E8B3D9100C9F94E /* CourseViewController.m in Sources */,
 				7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */,
 				81093AAE1E8B3D9100C9F94E /* CourseNavigationController.m in Sources */,
@@ -711,7 +717,7 @@
 			baseConfigurationReference = 3E375D4ADC5FCBA5EDE5BB65 /* Pods-OnlineEdu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 87GQR54YY2;
+				DEVELOPMENT_TEAM = 2SPA2FSXHP;
 				GCC_PREFIX_HEADER = OnlineEdu/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineEdu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -725,7 +731,7 @@
 			baseConfigurationReference = C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 87GQR54YY2;
+				DEVELOPMENT_TEAM = 2SPA2FSXHP;
 				GCC_PREFIX_HEADER = OnlineEdu/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineEdu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
