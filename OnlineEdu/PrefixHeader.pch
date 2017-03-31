@@ -16,19 +16,29 @@
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define RGBA(r,g,b,a)  [UIColor colorWithRed:(double)r/255.0f green:(double)g/255.0f blue:(double)b/255.0f alpha:a]
 #define RGB(r,g,b)  [UIColor colorWithRed:(double)r/255.0f green:(double)g/255.0f blue:(double)b/255.0f alpha:1]
+#define blueText  [UIColor colorWithRed:(double)62/255.0f green:(double)170/255.0f blue:(double)239/255.0f alpha:1]
+#define Text666666Color UIColorFromRGB(0x666666)
+#define linedcdcdcColor UIColorFromRGB(0xdcdcdc)
+#define Text333333Color UIColorFromRGB(0x333333)
 //屏幕尺寸
 #define UIScreenWidth [UIScreen mainScreen].bounds.size.width
 #define UIScreenHeight [UIScreen mainScreen].bounds.size.height
 //设计图尺寸
-#define UIPlanWidth 1242.00
-#define UIPlanScale UIScreenWidth/1242.00
+#define UIPlanScale1242 UIScreenWidth/1242.00
+#define UI1242(length) UIScreenWidth/1242.00*length
+#define UIPlanScale900 UIScreenWidth/900.00
+#define UI900(length) UIScreenWidth/900.00*length
 //接口地址
 #define API_HOST @"http://127.0.0.1/oephp/index.php/Home/"
 //轮播图比例
 #define RingImage 409.00/1072
-
-
-
+//NSUserDefaults
+#define UDSet(obj,key)  [[NSUserDefaults standardUserDefaults] setObject:obj forKey:key];[[NSUserDefaults standardUserDefaults] synchronize]
+#define UDGetfor(key)  [[NSUserDefaults standardUserDefaults]objectForKey:key]
+//底部Y坐标
+#define lastBottomY(view) view.frame.size.height+view.frame.origin.y
+//右边x坐标
+#define lastRightX(view) view.frame.size.width+view.frame.origin.x
 
 //机型判断
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

@@ -13,4 +13,6 @@
 - (instancetype)initWithTitle:(NSString *)title;
 -(void)setNavTitleWith:(NSString*)title;
 -(void)setBarBtnWithImage:(UIImage*)image SEL:(SEL)action;
+-(void)setBack;
+-(void)setShadow:(UIView*)view Opacity:(float)opacity Radius:(float)radius Color:(UIColor*)color;
 @end

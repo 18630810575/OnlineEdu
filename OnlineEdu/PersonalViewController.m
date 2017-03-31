@@ -24,7 +24,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
+    [super viewWillAppear: YES];
 }
 #pragma mark -----others-----
 

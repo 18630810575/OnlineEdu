@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getWebInfoDemo];
-    [self setBar];
     [self setVC];
+    [self setBar];
 }
 -(void)setVC{
     HomeViewController* homeVC = [[HomeViewController alloc] init];
@@ -40,10 +40,24 @@
     
     self.viewControllers = @[navHomeVC,navCourseVC,navPersonalVC];
     
+    UIImage *homeImage = [[UIImage imageNamed:@"home2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectHomeImage = [[UIImage imageNamed:@"home1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UITabBarItem *tabbarItem0 = [[UITabBarItem alloc] initWithTitle:@"主页" image:homeImage selectedImage:selectHomeImage];
     
-    self.viewControllers[0].tabBarItem.title = @"主页";
-    self.viewControllers[1].tabBarItem.title = @"课程";
-    self.viewControllers[2].tabBarItem.title = @"我的";
+    self.viewControllers[0].tabBarItem = tabbarItem0;
+    
+    UIImage *couseImage = [[UIImage imageNamed:@"course2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectCouseImage = [[UIImage imageNamed:@"course1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UITabBarItem *tabbarItem1 = [[UITabBarItem alloc] initWithTitle:@"课程" image:couseImage selectedImage:selectCouseImage];
+    
+    self.viewControllers[1].tabBarItem = tabbarItem1;
+    
+    UIImage *personalImage = [[UIImage imageNamed:@"personal2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectPersonalImage = [[UIImage imageNamed:@"personal1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UITabBarItem *tabbarItem2 = [[UITabBarItem alloc] initWithTitle:@"我的" image:personalImage selectedImage:selectPersonalImage];
+    
+    self.viewControllers[2].tabBarItem = tabbarItem2;
+    
 }
 -(void)setBar{
     CGRect rect = CGRectMake(0, 0, UIScreenWidth, 1);
@@ -73,9 +87,11 @@
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:10.0f],
                                                         NSForegroundColorAttributeName : RGB(56, 179, 253)} forState:UIControlStateSelected];
     
-    //    [self.viewControllers[0].tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
-    //    [self.viewControllers[1].tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
-    //    [self.viewControllers[2].tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
+    
+    
+    [self.viewControllers[0].tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-2)];
+    [self.viewControllers[1].tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-2)];
+    [self.viewControllers[2].tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-2)];
 }
 -(void)getWebInfoDemo{
 
