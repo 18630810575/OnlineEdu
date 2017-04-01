@@ -6,4 +6,5 @@ target 'OnlineEdu' do
   pod 'SDWebImage', '~> 3.7.2'
   pod 'MBProgressHUD', '~> 0.9.1'
   pod 'MJRefresh'
+  pod 'SDAutoLayout', '~> 2.1.3'
 end

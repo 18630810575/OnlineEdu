@@ -68,6 +68,11 @@
     CGFloat pageWidth = self.threeScrollView.frame.size.width;
     // 根据当前的x坐标和页宽度计算出当前页数
     int currentPage = floor((self.threeScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 2;
+    float currentPageF = (self.threeScrollView.contentOffset.x - pageWidth) / pageWidth + 2;
+    NSLog(@"%g",currentPageF);
+    if (currentPage-currentPageF!=0) {
+        return;
+    }
     int pageOffset = _indexPage-currentPage;
     //通过改变contentOffset来切换滚动视图的子界面
     float offset_X = self.threeScrollView.contentOffset.x;
