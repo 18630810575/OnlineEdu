@@ -71,6 +71,7 @@
     if (self.navigationController.viewControllers.count == 1) {
         self.navigationItem.leftBarButtonItem.customView.hidden=YES;
     }
+    
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:YES];
