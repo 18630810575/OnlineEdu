@@ -25,8 +25,15 @@
 		81093ABA1E8B3DB100C9F94E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AB61E8B3DB100C9F94E /* HomeViewController.m */; };
 		81093ABE1E8B402600C9F94E /* PersonalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */; };
 		81093AC11E8B570400C9F94E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81093AC01E8B570400C9F94E /* BaseNavigationController.m */; };
-		812330E11E8E8B6400F83BF6 /* TeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 812330E01E8E8B6400F83BF6 /* TeacherCell.m */; };
+		812330E41E9475CE00F83BF6 /* TeacherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 812330E31E9475CE00F83BF6 /* TeacherTableViewCell.m */; };
 		812B36661E8DF35F00BDE9E3 /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 812B36651E8DF35F00BDE9E3 /* CourseDetailViewController.m */; };
+		815996EB1E947DA500D9DE23 /* CourseInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815996EA1E947DA500D9DE23 /* CourseInfoViewCell.m */; };
+		815996EE1E95DBB500D9DE23 /* CourseTextImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815996ED1E95DBB500D9DE23 /* CourseTextImageTableViewCell.m */; };
+		815996F11E95E30D00D9DE23 /* CourseTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815996F01E95E30D00D9DE23 /* CourseTextTableViewCell.m */; };
+		815996F41E9637BE00D9DE23 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815996F31E9637BE00D9DE23 /* UserTableViewCell.m */; };
+		815996F71E972F7A00D9DE23 /* UserNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815996F61E972F7A00D9DE23 /* UserNormalTableViewCell.m */; };
+		815996FA1E972FA500D9DE23 /* UserCircleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815996F91E972FA500D9DE23 /* UserCircleTableViewCell.m */; };
+		815996FD1E972FC400D9DE23 /* UserOvalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815996FC1E972FC400D9DE23 /* UserOvalTableViewCell.m */; };
 		EAAA2AEE245CEA0A0FED647B /* libPods-OnlineEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF07414CD83683281E26337 /* libPods-OnlineEdu.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -88,10 +95,24 @@
 		81093ABD1E8B402600C9F94E /* PersonalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalNavigationController.m; sourceTree = "<group>"; };
 		81093ABF1E8B570400C9F94E /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		81093AC01E8B570400C9F94E /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		812330DF1E8E8B6400F83BF6 /* TeacherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherCell.h; sourceTree = "<group>"; };
-		812330E01E8E8B6400F83BF6 /* TeacherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherCell.m; sourceTree = "<group>"; };
+		812330E21E9475CE00F83BF6 /* TeacherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherTableViewCell.h; sourceTree = "<group>"; };
+		812330E31E9475CE00F83BF6 /* TeacherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherTableViewCell.m; sourceTree = "<group>"; };
 		812B36641E8DF35F00BDE9E3 /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
 		812B36651E8DF35F00BDE9E3 /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
+		815996E91E947DA500D9DE23 /* CourseInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInfoViewCell.h; sourceTree = "<group>"; };
+		815996EA1E947DA500D9DE23 /* CourseInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInfoViewCell.m; sourceTree = "<group>"; };
+		815996EC1E95DBB500D9DE23 /* CourseTextImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTextImageTableViewCell.h; sourceTree = "<group>"; };
+		815996ED1E95DBB500D9DE23 /* CourseTextImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTextImageTableViewCell.m; sourceTree = "<group>"; };
+		815996EF1E95E30D00D9DE23 /* CourseTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTextTableViewCell.h; sourceTree = "<group>"; };
+		815996F01E95E30D00D9DE23 /* CourseTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTextTableViewCell.m; sourceTree = "<group>"; };
+		815996F21E9637BE00D9DE23 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		815996F31E9637BE00D9DE23 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		815996F51E972F7A00D9DE23 /* UserNormalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNormalTableViewCell.h; sourceTree = "<group>"; };
+		815996F61E972F7A00D9DE23 /* UserNormalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNormalTableViewCell.m; sourceTree = "<group>"; };
+		815996F81E972FA500D9DE23 /* UserCircleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCircleTableViewCell.h; sourceTree = "<group>"; };
+		815996F91E972FA500D9DE23 /* UserCircleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCircleTableViewCell.m; sourceTree = "<group>"; };
+		815996FB1E972FC400D9DE23 /* UserOvalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserOvalTableViewCell.h; sourceTree = "<group>"; };
+		815996FC1E972FC400D9DE23 /* UserOvalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserOvalTableViewCell.m; sourceTree = "<group>"; };
 		C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineEdu/Pods-OnlineEdu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +176,14 @@
 		7DBE81D71E8A541500BF3870 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				815996F21E9637BE00D9DE23 /* UserTableViewCell.h */,
+				815996F31E9637BE00D9DE23 /* UserTableViewCell.m */,
+				815996F51E972F7A00D9DE23 /* UserNormalTableViewCell.h */,
+				815996F61E972F7A00D9DE23 /* UserNormalTableViewCell.m */,
+				815996F81E972FA500D9DE23 /* UserCircleTableViewCell.h */,
+				815996F91E972FA500D9DE23 /* UserCircleTableViewCell.m */,
+				815996FB1E972FC400D9DE23 /* UserOvalTableViewCell.h */,
+				815996FC1E972FC400D9DE23 /* UserOvalTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -366,8 +395,14 @@
 		81093A9C1E8B3D4500C9F94E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				812330DF1E8E8B6400F83BF6 /* TeacherCell.h */,
-				812330E01E8E8B6400F83BF6 /* TeacherCell.m */,
+				815996E91E947DA500D9DE23 /* CourseInfoViewCell.h */,
+				815996EA1E947DA500D9DE23 /* CourseInfoViewCell.m */,
+				812330E21E9475CE00F83BF6 /* TeacherTableViewCell.h */,
+				812330E31E9475CE00F83BF6 /* TeacherTableViewCell.m */,
+				815996EC1E95DBB500D9DE23 /* CourseTextImageTableViewCell.h */,
+				815996ED1E95DBB500D9DE23 /* CourseTextImageTableViewCell.m */,
+				815996EF1E95E30D00D9DE23 /* CourseTextTableViewCell.h */,
+				815996F01E95E30D00D9DE23 /* CourseTextTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -574,19 +609,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815996FD1E972FC400D9DE23 /* UserOvalTableViewCell.m in Sources */,
 				7DE700CE1E896904004532E5 /* APIClient.m in Sources */,
 				7DBE81DB1E8A552800BF3870 /* PersonalViewController.m in Sources */,
+				815996FA1E972FA500D9DE23 /* UserCircleTableViewCell.m in Sources */,
+				812330E41E9475CE00F83BF6 /* TeacherTableViewCell.m in Sources */,
+				815996EE1E95DBB500D9DE23 /* CourseTextImageTableViewCell.m in Sources */,
 				7DE7008F1E89082E004532E5 /* AppDelegate.m in Sources */,
 				7D7702781E8BB2DA009FA92D /* SettingViewController.m in Sources */,
-				812330E11E8E8B6400F83BF6 /* TeacherCell.m in Sources */,
+				815996EB1E947DA500D9DE23 /* CourseInfoViewCell.m in Sources */,
 				81093AB01E8B3D9100C9F94E /* CourseViewController.m in Sources */,
 				7DE700CB1E8911DB004532E5 /* BaseViewController.m in Sources */,
 				81093AAE1E8B3D9100C9F94E /* CourseNavigationController.m in Sources */,
 				81093AC11E8B570400C9F94E /* BaseNavigationController.m in Sources */,
+				815996F11E95E30D00D9DE23 /* CourseTextTableViewCell.m in Sources */,
+				815996F41E9637BE00D9DE23 /* UserTableViewCell.m in Sources */,
 				81093ABA1E8B3DB100C9F94E /* HomeViewController.m in Sources */,
 				81093AB81E8B3DB100C9F94E /* HomeNavigationController.m in Sources */,
 				7DE700C71E8909B2004532E5 /* MainViewController.m in Sources */,
 				81093ABE1E8B402600C9F94E /* PersonalNavigationController.m in Sources */,
+				815996F71E972F7A00D9DE23 /* UserNormalTableViewCell.m in Sources */,
 				7DE700D11E896945004532E5 /* WebAgent.m in Sources */,
 				812B36661E8DF35F00BDE9E3 /* CourseDetailViewController.m in Sources */,
 				7DE7008C1E89082E004532E5 /* main.m in Sources */,

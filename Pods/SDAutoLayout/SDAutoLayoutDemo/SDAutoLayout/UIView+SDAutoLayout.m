@@ -364,7 +364,6 @@
 - (AutoHeight)autoHeightRatio
 {
     __weak typeof(self) weakSelf = self;
-    
     if (!_autoHeightRatio) {
         _autoHeightRatio = ^(CGFloat ratioaValue) {
             weakSelf.needsAutoResizeView.autoHeightRatioValue = @(ratioaValue);
