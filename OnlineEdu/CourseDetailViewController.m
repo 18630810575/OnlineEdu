@@ -8,7 +8,7 @@
 
 #import "CourseDetailViewController.h"
 #import "TeacherCell.h"
-@interface CourseDetailViewController ()
+@interface CourseDetailViewController ()<UIScrollViewDelegate>
 @property (strong,nonatomic)UIScrollView* scrollView;
 @property (strong,nonatomic)UIScrollView* threeScrollView;
 @property (strong,nonatomic)UIImageView* topImgView;
@@ -50,6 +50,39 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark -----others-----
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if (scrollView == self.threeScrollView) {
+        // 得到每页宽x度
+        CGFloat pageWidth = self.threeScrollView.frame.size.width;
+        // 根据当前的x坐标和页宽度计算出当前页数
+        int currentPage = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 2;
+        NSLog(@"%d",currentPage);
+        UIButton* btn = [[UIButton alloc] init];
+        btn.tag = 100+currentPage;
+        [self topThree:btn];
+        btn=nil;
+    }
+}
+- (void)changeView{
+    // 得到每页宽度
+    CGFloat pageWidth = self.threeScrollView.frame.size.width;
+    // 根据当前的x坐标和页宽度计算出当前页数
+    int currentPage = floor((self.threeScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 2;
+    float currentPageF = (self.threeScrollView.contentOffset.x - pageWidth) / pageWidth + 2;
+    NSLog(@"%g",currentPageF);
+    if (currentPage-currentPageF!=0) {
+        return;
+    }
+    int pageOffset = _indexPage-currentPage;
+    //通过改变contentOffset来切换滚动视图的子界面
+    float offset_X = self.threeScrollView.contentOffset.x;
+    //每次切换一个屏幕
+    offset_X += pageOffset*UIScreenWidth;
+    
+    CGPoint resultPoint = CGPointMake(offset_X, 0);
+    [self.threeScrollView setContentOffset:resultPoint animated:YES];
+}
+
 #pragma mark -----onclick-----
 -(void)share{
     NSLog(@"分享");
@@ -86,8 +119,6 @@
         rect.size.width = width;
         self.lineBlue.frame = rect;
         self.lineBlue.center = p;
-        
-        
     }else{
         _indexPage = 3;
         [self.courseDetailBtn setTitleColor:Text666666Color forState:UIControlStateNormal];
@@ -104,6 +135,7 @@
         self.lineBlue.frame = rect;
         self.lineBlue.center = p;
     }
+    [self changeView];
 }
 -(void)buy{
     NSLog(@"购买");
@@ -130,6 +162,7 @@
 }
 -(void)setTopImgView{
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, UIScreenWidth, UIScreenHeight-64)];
+    self.scrollView.delegate = self;
     [self.view addSubview:self.scrollView];
     
     self.topImgView = [[UIImageView alloc] initWithFrame:CGRectMake(40*UIPlanScale900, 0, UIScreenWidth-2*40*UIPlanScale900, 395*UIPlanScale900)];
@@ -181,7 +214,9 @@
     [self.scrollView addSubview:self.lineBlue];
     
     y+=1;
+    
     self.threeScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, y, UIScreenWidth, UIScreenHeight-49-64)];
+    self.threeScrollView.delegate = self;
     [self.scrollView addSubview:self.threeScrollView];
     
     //设置滚动范围

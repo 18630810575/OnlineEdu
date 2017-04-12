@@ -47,6 +47,15 @@
     self.titleLabel.frame = CGRectMake(UI900(11)+CGRectGetMaxX(self.nameLabel.frame), 50*UIPlanScale900, CGRectGetWidth(self.titleLabel.frame), CGRectGetHeight(self.titleLabel.frame));
     [self addSubview:self.titleLabel];
     
+    self.rightImgView = [[UIImageView alloc] initWithFrame:CGRectMake(UIScreenWidth-UI900(44)-UI900(39), 10, UI900(44), UI900(44))];
+    self.rightImgView.image = [UIImage imageNamed:@"rightGo"];
+    self.rightImgView.contentMode = UIViewContentModeScaleAspectFit;
+    CGPoint p = self.rightImgView.center;
+    p.y = self.center.y;
+    self.rightImgView.center = p;
+    [self addSubview:self.rightImgView];
+
+    
 //    self.detailLabel = [[UILabel alloc] init];
 //    self.detailLabel.text = @"  金牌讲师  ";
 //    self.detailLabel.textColor = [UIColor whiteColor];
@@ -58,6 +67,7 @@
 //    self.detailLabel.layer.cornerRadius = rect.size.height/2;
 //    self.detailLabel.frame = CGRectMake(UI900(11)+CGRectGetMaxX(self.nameLabel.frame), 50*UIPlanScale900, CGRectGetWidth(self.titleLabel.frame), CGRectGetHeight(self.titleLabel.frame));
 //    [self addSubview:self.titleLabel];
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.

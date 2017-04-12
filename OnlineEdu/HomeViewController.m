@@ -153,7 +153,6 @@
 //    NSLog(@"开启定时器");
     [self.rotateTimer setFireDate:[NSDate dateWithTimeInterval:3 sinceDate:[NSDate date]]];
     
-    
         // 得到每页宽度
         CGFloat pageWidth = scrollView.frame.size.width;
         // 根据当前的x坐标和页宽度计算出当前页数
@@ -172,8 +171,6 @@
             _isLastOk = 1;
         }
 //        NSLog(@"%i",currentPage);
-    
-    
 }
 
 - (void) scrollViewDidScroll:(UIScrollView *)sender {

@@ -458,9 +458,7 @@
 				TargetAttributes = {
 					7DE700861E89082E004532E5 = {
 						CreatedOnToolsVersion = 8.0;
-
 						DevelopmentTeam = 87GQR54YY2;
-
 						ProvisioningStyle = Automatic;
 					};
 					7DE7009F1E89082E004532E5 = {
@@ -733,9 +731,7 @@
 			baseConfigurationReference = 3E375D4ADC5FCBA5EDE5BB65 /* Pods-OnlineEdu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
 				DEVELOPMENT_TEAM = 87GQR54YY2;
-
 				GCC_PREFIX_HEADER = OnlineEdu/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineEdu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -749,9 +745,7 @@
 			baseConfigurationReference = C2C7C2B6345CB2C0A1D921E2 /* Pods-OnlineEdu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
 				DEVELOPMENT_TEAM = 87GQR54YY2;
-
 				GCC_PREFIX_HEADER = OnlineEdu/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineEdu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
