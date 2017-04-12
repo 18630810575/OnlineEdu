@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface PersonalViewController : BaseViewController
-
+@interface PersonalViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+@property (strong,nonatomic)UITableView* tableView;
 @end

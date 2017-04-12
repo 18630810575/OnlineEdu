@@ -28,6 +28,7 @@
 #define UI1242(length) UIScreenWidth/1242.00*length
 #define UIPlanScale900 UIScreenWidth/900.00
 #define UI900(length) UIScreenWidth/900.00*length
+#define UI701(length) UIScreenWidth/701.00*length
 //接口地址
 #define API_HOST @"http://127.0.0.1/oephp/index.php/Home/"
 //轮播图比例
@@ -48,5 +49,6 @@
 #define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
-
+//第三方
+#import "SDAutoLayout.h"
 #endif /* PrefixHeader_pch */

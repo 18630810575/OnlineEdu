@@ -7,14 +7,18 @@
 //
 
 #import "CourseDetailViewController.h"
-#import "TeacherCell.h"
-@interface CourseDetailViewController ()<UIScrollViewDelegate>
+#import "CourseInfoViewCell.h"
+#import "TeacherTableViewCell.h"
+#import "CourseTextImageTableViewCell.h"
+#import "CourseTextTableViewCell.h"
+@interface CourseDetailViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (strong,nonatomic)UIScrollView* scrollView;
 @property (strong,nonatomic)UIScrollView* threeScrollView;
 @property (strong,nonatomic)UIImageView* topImgView;
 @property (strong,nonatomic)UIButton* courseDetailBtn;
 @property (strong,nonatomic)UIButton* studentReviewBtn;
 @property (strong,nonatomic)UIButton* aboutcourseBtn;
+@property (strong,nonatomic)UITableView* courseDetailTableView;
 @property (strong,nonatomic)UIScrollView* courseDetailScrollView;
 @property (strong,nonatomic)UIScrollView* studentReviewScrollView;
 @property (strong,nonatomic)UIScrollView* aboutcourseScrollView;
@@ -23,6 +27,7 @@
 @property (strong,nonatomic)UILabel* priceLabel;
 @property (strong,nonatomic)UIButton* buyBtn;
 @property int indexPage;
+@property float lastContentOffset;
 @end
 
 @implementation CourseDetailViewController
@@ -70,19 +75,65 @@
     int currentPage = floor((self.threeScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 2;
     float currentPageF = (self.threeScrollView.contentOffset.x - pageWidth) / pageWidth + 2;
     NSLog(@"%g",currentPageF);
-    if (currentPage-currentPageF!=0) {
-        return;
-    }
+//    while (currentPage-currentPageF!=0) {
+//        return;
+//    }
     int pageOffset = _indexPage-currentPage;
     //通过改变contentOffset来切换滚动视图的子界面
     float offset_X = self.threeScrollView.contentOffset.x;
+    int count = self.threeScrollView.contentOffset.x/UIScreenWidth;
+    float offset_X1 =self.threeScrollView.contentOffset.x-count*UIScreenWidth;
     //每次切换一个屏幕
-    offset_X += pageOffset*UIScreenWidth;
+    offset_X += pageOffset*UIScreenWidth-offset_X1;
     
     CGPoint resultPoint = CGPointMake(offset_X, 0);
     [self.threeScrollView setContentOffset:resultPoint animated:YES];
 }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == self.courseDetailTableView) {
+        return 20;
+    }
+    return 0;
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    UITableViewCell* cell;
+
+    if (tableView == self.courseDetailTableView) {
+        if (indexPath.row == 0) {
+            CourseInfoViewCell *courseInfoViewCell = [tableView dequeueReusableCellWithIdentifier:@"CourseInfoViewCell"];
+            NSLog(@"%@",courseInfoViewCell.courseNameLabel.text);
+            cell = courseInfoViewCell;
+        }else if (indexPath.row == 1){
+            TeacherTableViewCell *teacherTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"TeacherTableViewCell"];
+            cell = teacherTableViewCell;
+        }
+        else{
+            if (indexPath.row%2 == 0) {
+                CourseTextTableViewCell *courseTextTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"CourseTextTableViewCell"];
+//                courseTextTableViewCell.backgroundColor = [UIColor yellowColor];
+                cell = courseTextTableViewCell;
+            }else{
+                CourseTextImageTableViewCell *courseTextImageTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"CourseTextImageTableViewCell"];
+//                courseTextImageTableViewCell.backgroundColor = [UIColor greenColor];
+                cell = courseTextImageTableViewCell;
+            }
+        }
+    }
+    
+//    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
+    
+    
+    return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [tableView cellHeightForIndexPath:indexPath cellContentViewWidth:UIScreenWidth tableView:tableView];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 #pragma mark -----onclick-----
 -(void)share{
     NSLog(@"分享");
@@ -140,6 +191,37 @@
 -(void)buy{
     NSLog(@"购买");
 }
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (self.scrollView.contentOffset.y >= CGRectGetMaxY(self.topImgView.frame)+8-2) {
+        self.courseDetailTableView.userInteractionEnabled = YES;
+    }else{
+        self.courseDetailTableView.userInteractionEnabled = NO;
+    }
+    if (scrollView == self.courseDetailTableView) {
+        CGFloat y = scrollView.contentOffset.y;
+        if (y > _lastContentOffset) {
+            if (self.scrollView.contentOffset.y >= CGRectGetMaxY(self.topImgView.frame)+8) {
+                self.courseDetailTableView.userInteractionEnabled = YES;
+            }
+            NSLog(@"==%g",self.scrollView.contentOffset.y);
+            NSLog(@"--%g",CGRectGetMaxY(self.topImgView.frame)+8);
+            NSLog(@"用户往上拖动，也就是屏幕内容向下滚动");
+
+        } else {
+            NSLog(@"==%g",scrollView.contentOffset.y);
+            NSLog(@"--%g",_lastContentOffset);
+            NSLog(@"//用户往下拖动，也就是屏幕内容向上滚动");
+            if (scrollView.contentOffset.y < 0) {
+                self.courseDetailTableView.userInteractionEnabled = NO;
+            }
+            
+        }
+        _lastContentOffset = y;
+        
+
+    }
+}
 #pragma mark -----getters-----
 -(void)setTabBar{
     UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, UIScreenHeight-49-64, UIScreenWidth, 49)];
@@ -171,6 +253,8 @@
     [self.scrollView addSubview:self.topImgView];
     [self setTopThreeBtn];
     self.topImgView.backgroundColor = [UIColor redColor];
+    //设置滚动范围
+    self.scrollView.contentSize = CGSizeMake(UIScreenWidth, self.scrollView.frame.size.height+CGRectGetMaxY(self.topImgView.frame)+8);
 }
 -(void)setTopThreeBtn{
     float y = self.topImgView.frame.origin.y+self.topImgView.frame.size.height+15;
@@ -219,6 +303,7 @@
     self.threeScrollView.delegate = self;
     [self.scrollView addSubview:self.threeScrollView];
     
+    
     //设置滚动范围
     self.threeScrollView.contentSize = CGSizeMake(UIScreenWidth*3, self.threeScrollView.frame.size.height);
     //设置分页效果
@@ -235,70 +320,37 @@
     
     rect.origin.x += UIScreenWidth;
     self.studentReviewScrollView = [[UIScrollView alloc]initWithFrame:rect];
-    self.studentReviewScrollView.backgroundColor = [UIColor yellowColor];
     [self.threeScrollView addSubview:self.studentReviewScrollView];
     
     rect.origin.x += UIScreenWidth;
     self.aboutcourseScrollView = [[UIScrollView alloc]initWithFrame:rect];
-    self.aboutcourseScrollView.backgroundColor = [UIColor greenColor];
     [self.threeScrollView addSubview:self.aboutcourseScrollView];
     
-    [self setCourseData];
+    [self setcourseDetailTableView];
+//    [self setCourseData];
     [self setStudentReviewData];
     [self setAboutCourseData];
     
 }
--(void)setCourseData{
-    NSMutableArray* imgNameArr = [NSMutableArray array];
-    [imgNameArr addObject:@"courseType"];
-    [imgNameArr addObject:@"studyTime"];
-    [imgNameArr addObject:@"study"];
-    [imgNameArr addObject:@"favour"];
-    UILabel* courseNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(33*UIPlanScale900, 40*UIPlanScale900, 0.6*UIScreenWidth, 41*UIPlanScale900)];
-    courseNameLabel.preferredMaxLayoutWidth = 0.6*UIScreenWidth;
-    courseNameLabel.text = @"客服系统运维系统班";
-    courseNameLabel.textColor = Text333333Color;
-    courseNameLabel.font = [UIFont systemFontOfSize:41*UIPlanScale900];
-    [self.courseDetailScrollView addSubview:courseNameLabel];
+-(void)setcourseDetailTableView{
+    self.courseDetailTableView = [[UITableView alloc] init];
+    [self.courseDetailTableView registerClass:[CourseInfoViewCell class] forCellReuseIdentifier:@"CourseInfoViewCell"];
+    [self.courseDetailTableView registerClass:[TeacherTableViewCell class] forCellReuseIdentifier:@"TeacherTableViewCell"];
+    [self.courseDetailTableView registerClass:[CourseTextImageTableViewCell class] forCellReuseIdentifier:@"CourseTextImageTableViewCell"];
+    [self.courseDetailTableView registerClass:[CourseTextTableViewCell class] forCellReuseIdentifier:@"CourseTextTableViewCell"];
     
-    float width = UIScreenWidth-0.6*UIScreenWidth-(33+33)*UIPlanScale900;
-    UILabel* timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(UIScreenWidth-width-33*UIPlanScale900, 40*UIPlanScale900, width, 41*UIPlanScale900)];
-    timeLabel.preferredMaxLayoutWidth = 0.6*UIScreenWidth;
-    timeLabel.text = @"2017-12-12 12:12";
-    timeLabel.textColor = Text666666Color;
-    timeLabel.textAlignment = 2;
-    timeLabel.font = [UIFont systemFontOfSize:30*UIPlanScale900];
-    [self.courseDetailScrollView addSubview:timeLabel];
     
-    float y = timeLabel.frame.origin.y+timeLabel.frame.size.height;
-    float y1 =0.0;
-    for (int i = 0; i<4; i++) {
-        UIView* view = [[UIView alloc] initWithFrame:CGRectMake((i%4)*(UIScreenWidth/4), y, UIScreenWidth/4, 108*UIPlanScale900)];
-        [self.courseDetailScrollView addSubview:view];
-        CGRect rect = view.frame;
-        rect.origin.x = 0;
-        rect.origin.y = 0;
-        UIButton* button = [[UIButton alloc] initWithFrame:rect];
-        [button setImage:[UIImage imageNamed:imgNameArr[i]] forState:UIControlStateNormal];
-        [button setTitle:@" 123" forState:UIControlStateNormal];
-        button.titleLabel.font = [UIFont systemFontOfSize:30*UIPlanScale900];
-        [button setTitleColor:UIColorFromRGB(0xb7b7b7) forState:UIControlStateNormal];
-        button.adjustsImageWhenHighlighted = NO;
-        [view addSubview:button];
-        y1 = view.frame.size.height+view.frame.origin.y;
-    }
-    UIView* lineView = [[UIView alloc] initWithFrame:CGRectMake(0, y1, UIScreenWidth, 15*UIPlanScale900)];
-    lineView.backgroundColor = UIColorFromRGB(0xf0f0f0);
-    [self.courseDetailScrollView addSubview:lineView];
+    [self.courseDetailScrollView addSubview:self.courseDetailTableView];
+    self.courseDetailTableView.delegate = self;
+    self.courseDetailTableView.dataSource = self;
+    self.courseDetailTableView.userInteractionEnabled = NO;
     
-    y = lastBottomY(lineView);
-    
-    TeacherCell*teacherCell = [[TeacherCell alloc] init];
-    CGRect rect = teacherCell.frame;
-    rect.origin.y = CGRectGetMaxY(lineView.frame);
-    teacherCell.frame = rect;
-    [self.courseDetailScrollView addSubview:teacherCell];
-    
+    self.courseDetailTableView.sd_layout
+    .topSpaceToView(self.courseDetailScrollView,0)
+    .leftSpaceToView(self.courseDetailScrollView,0)
+    .rightSpaceToView(self.courseDetailScrollView,0)
+    .bottomSpaceToView(self.courseDetailScrollView,49+4+2);
+    NSLog(@"%@",self.courseDetailTableView);
 }
 -(void)setStudentReviewData{
     
